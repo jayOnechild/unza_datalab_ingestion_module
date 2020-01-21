@@ -1,0 +1,16 @@
+<%- include ("partials/header") %>
+
+<% namesList.forEach((doc)=>{%>
+    <li><b>Author:</b> <%=doc.author[0] + " "+doc.author[1]%> </li>
+    <li><b>Supervisor:</b> <%=doc.supervisor[0]+" "+doc.supervisor[1]%> </li>
+    <li><b>Title: </b><%=doc.title%> </li>
+    <li><b>Subject:</b> <%=doc.subject%> </li>
+    <li><b>Publication Date:</b> <%=doc.publication%> </li>
+    <li><b>Level of Study:</b> <%=doc.studyLevel%> </li>
+    <li><b>Publication Type:</b> <%=doc.pubType%> </li>
+    <li><b>School: </b><%=doc.school%> </li>
+    <li><b>Comment:</b> <%=doc.message%> </li>
+    <br><br>
+    <%})%>    
+      
+<%- include ("partials/footer") %>

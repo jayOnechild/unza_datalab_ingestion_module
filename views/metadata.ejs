@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Submission</title>
+    <link rel='stylesheet' href='style.css'/>
+</head>
+
+<td>
+    <style>
+        body {
+            background-color: #79968d;
+        }
+
+        h2 {
+            color: green;
+            text-decoration: underline;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+        table{
+            font-size:30px;
+        }
+
+        #menu {
+            text-align: right;
+        }
+
+        .buttons {
+            background-color: #349b34;
+            color: green;
+        }
+
+        #secndSection {
+            padding-left: 30px;
+            padding-bottom: 2%;
+            border-radius: 1%;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        #meta {
+            padding-bottom: 2%;
+            border: 2px solid black;
+            border-radius: 1%;
+            padding: 30px 30px 250px 30px;
+        }
+
+        form {
+/*            width: 300px;*/
+        }
+
+    </style>
+
+
+    <div id="menu">
+       
+        <span>Submissions</span> <span>Profile</span> <span>Config</span> <span>Help</span>
+    </div>
+    <div>
+        <h2>New Submission: ETD-ms Metadata</h2>
+        <span class="buttons">
+            <button>Upload File</button>
+            <button>Metadata</button>
+            <button>Complete Submission</button>
+        </span>
+    </div><br>
+    
+    <section class="container">
+    <form action="/metadata" method="post" id="meta">
+        <p>Please fill in the requested information about this submission below:</p>
+        <table>
+        <tr>
+            <td>Author Fullname:</td>
+            <td><input type="text" name="author[0]" placeholder="First Name" required></td>
+            <td><input type="text" name="author[1]" placeholder="Last Name" required></td>
+        </tr>
+        <br><br>
+        <tr>
+        <td>Supervsor:</td>
+            <td><input type="text" name="supervisor[0]" placeholder="First Name" required><br><br><br></td>
+            <td><input type="text" name="supervisor[1]" placeholder="Last Name" required><br><br><br></td>
+        </tr>
+        <tr>
+            <td>Title:</td>
+            <td><input type="text" name="title" placeholder="Title" required><br><br></td>
+        <tr>
+            <td>Subject:</td>
+            <td><input type="text" name="subject" placeholder="Subject" required><br><br></td>
+        </tr>
+        <tr>
+            <td>Publication Date:</td>
+            <td><input type="text" name="publication" placeholder="Date" required><br><br></td>
+        </tr>
+        <tr>
+            <td>Level of study:</td>
+            <!-- <td><input type="text" name="studyLevel" placeholder="Level of study" required><br><br></td> -->
+            <td><select>
+                <option value="PHD">PHD</option>
+                <option value="Masters">Masters</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Publicatioin Type:</td>
+            <!-- <td><input type="text" name="pubType" placeholder="Publication Type" required><br><br></td> -->
+            <td><select>
+                <option value="Thesis">Thesis</option>
+                <option value="Dissertation">Dissertation</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td> Faculty Schoool:</td>
+            <!-- <td><input type="text"  name="school" placeholder="Faculty School" required><br><br></td> -->
+            <td><select name="school">
+            <option value="Education">School of Education</option>
+            <option value="Humanities">School of Humanities and Social Sciences </option>            
+            <option value="Natural Sciences">School of Natural sciences</option>
+            <option value="Medicine">School of Medicine</option>
+            <option value="Law">School of Law</option>
+            <option value="Health">School of Health Sciences</option>
+            <option value="Mines">School of Mines</option>
+            <option value="Medicine">School of Medicine</option>
+            <option value="Graduate">Graduate School of Business</option>
+            <option value="Nursing">School of Nursing Sciences</option>
+            <option value="PubHealth">School of Public Health</option>
+            <option value="VetMedicine">School of Veterinary</option>
+            <option value="Agriculture">School of Agricultural Sciences</option>
+        </select></td>
+        </tr>
+        <tr>
+            <td>        
+            Additional comment:
+            </td>
+            <td>
+               <textarea name="message" placeholder="Wite your cmment here..." rows="7"  maxLength="6000" required></textarea><br>
+               <button type="submit" name="submit">Next</button><br><br> 
+            </td>
+        </tr>       
+        </table>
+    </form>
+    </section>
+<%- include ("partials/footer") %>

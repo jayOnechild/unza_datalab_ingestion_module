@@ -1,0 +1,19 @@
+   <%- include ("partials/header") %>
+   
+    <div id="secndSection">
+        <div>
+            <p><small>please enter the name of the file on yout hard drive corresponding to your item.<br> If you click "Browse.." a new window will appear in which you can locate and select the file on your local harddrive</small></p>
+            <form action="/submission" method="post" enctype="multipart/form-data">
+                <input type="file" name="pdfupload" id="pdfinput"><br>
+
+                <label id="uploadsuccess"></label>
+                <input onclick="document.getElementById('uploadsuccess').innerHTML= "Upload sucessful" type="submit" value="Upload" for="pdfinput">
+                
+                <p ></p> 
+            </form>
+            <small>select a file or drag and drop a file</small>
+        </div><br>
+        <button>Next</button>
+    </div>
+    
+    <%- include ("partials/footer") %>

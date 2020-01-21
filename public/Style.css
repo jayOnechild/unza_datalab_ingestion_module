@@ -1,0 +1,33 @@
+
+        body {
+            background-color: #79968d;
+        }
+
+        h2 {
+            color: green;
+            text-decoration: underline;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        #menu {
+            text-align: right;
+        }
+
+        .buttons {
+            background-color: #349b34;
+            color: green;
+        }
+
+        #secndSection {
+            padding-left: 30px;
+            padding-bottom: 25%;
+            border-radius: 1%;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+ 
